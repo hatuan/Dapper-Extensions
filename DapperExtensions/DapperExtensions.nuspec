@@ -31,19 +31,13 @@
     </releaseNotes>
     <tags>orm sql micro-orm Data Dapper</tags>
 	<dependencies>
-      <dependency id="Dapper" version="2.0.30" />
-      <dependency id="Slapper.AutoMapper" version="2.0.1" />
+      <dependency id="Dapper" version="2.0.151" />
+      <dependency id="Slapper.AutoMapper" version="2.0.5" />
       <dependency id="Newtonsoft.Json" version="12.0.3" />
       <dependency id="Microsoft.CSharp" version="4.7.0" />
     </dependencies>
   </metadata>
   <files>
-      <file src="bin\Release\net461\DapperExtensions.dll" target="lib\net461\DapperExtensions.dll" />
-      <file src="bin\Release\netcoreapp2.1\DapperExtensions.dll" target="lib\netcoreapp2.1\DapperExtensions.dll" />
-      <file src="bin\Release\netcoreapp3.1\DapperExtensions.dll" target="lib\netcoreapp3.1\DapperExtensions.dll" />
-      <file src="bin\Release\net5.0\DapperExtensions.dll" target="lib\net5.0\DapperExtensions.dll" />
-      <file src="bin\Release\net5.0\DapperExtensions.dll" target="lib\net5.0\DapperExtensions.dll" />
       <file src="bin\Release\netstandard2.0\DapperExtensions.dll" target="lib\netstandard2.0\DapperExtensions.dll" />
-      <file src="bin\Release\netstandard2.1\DapperExtensions.dll" target="lib\netstandard2.1\DapperExtensions.dll" />
   </files>  
 </package>

@@ -1,14 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net461;net5.0;netstandard2.0;netstandard2.1;</TargetFrameworks>
-		<Version>1.7.0</Version>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<Version>1.7.2</Version>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<LangVersion>8.0</LangVersion>
 	</PropertyGroup>
 	
 	<PropertyGroup>
 		<RuntimeIdentifiers>win;osx;linux</RuntimeIdentifiers>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<DebugType>embedded</DebugType>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -87,8 +91,8 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
 		<PackageReference Include="Newtonsoft.Json" version="13.0.2" />
-		<PackageReference Include="Dapper" Version="2.0.90" />
-		<PackageReference Include="Slapper.AutoMapper" Version="2.0.1" targetFramework="$(TargetFramework)" />
+		<PackageReference Include="Dapper" Version="2.0.151" />
+		<PackageReference Include="Slapper.AutoMapper" Version="2.0.5" targetFramework="$(TargetFramework)" />
 		<PackageReference Include="System.Data.Common" Version="4.3.0" />
 	</ItemGroup>
 

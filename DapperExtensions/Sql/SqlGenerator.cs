@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 
 namespace DapperExtensions.Sql
@@ -248,7 +249,10 @@ namespace DapperExtensions.Sql
                 if (triggerIdentityColumn.Count > 1)
                     throw new ArgumentException("TriggerIdentity generator cannot be used with multi-column keys");
 
-                sql += $" RETURNING {triggerIdentityColumn.Select(p => GetColumnName(classMap, p, false, includePrefix: false)).First()} INTO {Configuration.Dialect.ParameterPrefix}IdOutParam";
+                if (Configuration.Dialect is PostgreSqlDialect)
+                    sql += $" RETURNING {triggerIdentityColumn.Select(p => GetColumnName(classMap, p, false, includePrefix: false)).First()}";
+                else
+                    sql += $" RETURNING {triggerIdentityColumn.Select(p => GetColumnName(classMap, p, false, includePrefix: false)).First()} INTO {Configuration.Dialect.ParameterPrefix}IdOutParam";
             }
 
             return sql;

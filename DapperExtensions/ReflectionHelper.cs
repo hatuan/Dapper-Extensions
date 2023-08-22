@@ -323,9 +323,18 @@ namespace DapperExtensions
             if (map == null)
                 throw new NullReferenceException(String.Format("Map was not found for {0}", entityType));
 
-            var entityPropertyName = propertyName.Split('_').Last();
+            string[] entityPropertyNames = propertyName.Split('_');
+
+            var entityPropertyName = entityPropertyNames[entityPropertyNames.Length - 1];
 
             IMemberMap propertyMap = map.Properties.SingleOrDefault(p => p.Name == entityPropertyName);
+
+            for (int i = entityPropertyNames.Length - 2; i>=0 && propertyMap == null; i--)
+            {
+                entityPropertyName = entityPropertyNames[i] + "_" + entityPropertyName;
+                propertyMap = map.Properties.SingleOrDefault(p => p.Name == entityPropertyName);
+            }
+
             if (propertyMap == null)
                 throw new NullReferenceException(String.Format("{0} was not found for {1}", entityPropertyName, entityType));
 

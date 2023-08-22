@@ -37,12 +37,6 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-	  <file src="bin\Release\net461\DapperExtensions.StrongName.dll" target="lib\net461\DapperExtensions.StrongName.dll" />
-	  <file src="bin\Release\netcoreapp2.1\DapperExtensions.StrongName.dll" target="lib\netcoreapp2.1\DapperExtensions.StrongName.dll" />
-	  <file src="bin\Release\netcoreapp3.1\DapperExtensions.StrongName.dll" target="lib\netcoreapp3.1\DapperExtensions.StrongName.dll" />
-	  <file src="bin\Release\net5.0\DapperExtensions.StrongName.dll" target="lib\net5.0\DapperExtensions.StrongName.dll" />
-	  <file src="bin\Release\net5.0\DapperExtensions.StrongName.dll" target="lib\net5.0\DapperExtensions.StrongName.dll" />
 	  <file src="bin\Release\netstandard2.0\DapperExtensions.StrongName.dll" target="lib\netstandard2.0\DapperExtensions.StrongName.dll" />
-	  <file src="bin\Release\netstandard2.1\DapperExtensions.StrongName.dll" target="lib\netstandard2.1\DapperExtensions.StrongName.dll" />
   </files>
 </package>
